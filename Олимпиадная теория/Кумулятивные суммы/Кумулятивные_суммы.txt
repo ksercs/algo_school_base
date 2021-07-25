@@ -1,0 +1,9 @@
+Одномерный массив:
+
+asum[i]=asum[i-1]+a[i]; при чем asum[0]=a[0];
+fsum(i, j) = asum[j]-asum[i-1];
+
+Двумерный массив:
+
+asum[i][j]=asum[i-1][j]+asum[i][j-1]+a[i][j]-asum[i-1][j-1];
+fsum(x1,y1,x2,y2) = asum[x2][y2]-asum[x2][y1-1]-asum[x1-1][y2]+asum[x1-1][y1-1];

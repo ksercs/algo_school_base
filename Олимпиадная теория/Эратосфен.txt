@@ -1,0 +1,10 @@
+    for (int i = 2; i <= 10000; i++)
+    {
+        cout << i << "\n";
+        int ch = mass[i];
+        if (!ch)
+            for (int j = i*i; j <= 10000; j += i)
+                mass[j] = 1;
+    }
+    for (int i = 2; i <= 10000; i++)
+        if (!mass[i]) cout << i << ", ";

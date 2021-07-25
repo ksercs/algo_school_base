@@ -1,0 +1,3 @@
+Дан массив чисел. Вывести на интервале (l,r) количество уникальных чисел.
+
+http://codeforces.com/problemset/problem/369/E?locale=ru

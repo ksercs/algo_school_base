@@ -1,0 +1,27 @@
+Функции.
+
+void make_set(int a)
+{
+ p[a]=a;
+ rank[a]=1;
+}
+
+void find_set(int a)
+{
+ if (a==p[a]) {return a;}
+ else
+     {
+	int res = find_set(p[a]);
+	p[a]=res;
+	return res;
+     }
+}
+
+void union_sets(int a, int b)
+{
+	a=find_set(a);
+	b=find_set(b);
+	if (rank[a]>rank[b]) {swap(a,b);}	
+	p[a]=b;
+	if (rank[a]==rank[b]) {rank[b]++;}
+}

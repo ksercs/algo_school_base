@@ -1,0 +1,13 @@
+vector <char> convert(int number, int base)
+{
+    vector<char> representation;
+    while(number != 0)
+    {
+        int remainder = number % base;
+        number /= base;
+        if(remainder <= 9) representation.push_back(remainder + '0');
+        else representation.push_back((remainder - 10) + 'A');
+    }
+    reverse(representation.begin(), representation.end());
+    return representation;
+}

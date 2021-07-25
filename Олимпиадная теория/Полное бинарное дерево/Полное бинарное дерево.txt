@@ -1,0 +1,40 @@
+–азмер дерева при n=100000  равен 262143.
+
+—умма вершин = (2^(n)-1);
+
+—войство натурального р€да:  pred(N) = N/2;
+			  potom_1(N) = 2*N;
+			  potom_2(N) = 2*N+1; 
+			кол-во узлов равно (2n-1), где n- кол-во листьев 
+			первый по индексу лист равен (n+1)/2, где n - это количество узлов
+
+int n;
+vector <int> vec;
+
+int lvl_count(int x)
+{
+    int level=1, ch=1;
+    while(ch<x)
+    {
+     ch*=2;
+     level++;
+    }
+return level;
+}
+
+void make_btree(int n)
+{
+     int lvl = lvl_count(n);
+     int cn = (1<<(lvl))-1;
+     vec.resize(cn); 
+}
+
+int find_pred(int x)
+{
+  return (x/2);
+}
+
+int find_potom(int x, int lr)
+{
+  return (2*x + lr);
+}

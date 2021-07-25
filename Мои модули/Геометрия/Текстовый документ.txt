@@ -1,0 +1,11 @@
+import math
+
+l, r = map(int, input().split())
+if math.sqrt((l / 2) ** 2 + (l / 2) ** 2) > r > l / 2:
+    cross = math.sqrt(r ** 2 - (l / 2) ** 2)
+    s = 4 * (cross * l / 2)
+    corner = abs(math.degrees(math.atan2(-cross * (l / 2) - (l / 2) * cross, (l / 2) ** 2 - (cross ** 2))))
+    s += math.pi * (r ** 2) / 360 * (360 - 4 * corner)
+    print(s)
+else:
+    print(min(math.pi * (r ** 2), l ** 2))

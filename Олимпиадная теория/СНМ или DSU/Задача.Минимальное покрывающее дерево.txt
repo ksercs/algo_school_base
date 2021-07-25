@@ -1,0 +1,34 @@
+(Алгоритм Крускала)
+
+//n-количество вершин, m-количество ребер
+
+struct edge
+{
+	int a,b, cost;	
+};
+
+(pair < int, pair < int, int > > e;)
+
+typedef pair < int, pair < int, int > > PIP;
+PIP e[M];
+vector <PIP> ans;
+
+#define ff first;
+#define ss second;
+
+void kruskal ()
+{
+  sort(e, e+m);
+  for (int i=0; i<m; i++)
+  {
+	int a = find_set(e[i].ss.ss);
+	int b = find.set(e[i].ss.ss);
+	if (a!=b) 
+	{
+	union_sets(a,b);
+	ans.push_back(e[i]);
+	if (ans.size()==n-1) {break;}
+	}
+	
+  }   
+}
